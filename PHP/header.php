@@ -11,7 +11,7 @@
     </header>
 
     <nav>
-        <a href="#">Inicio</a>
+        <a href="../PHP/registro.php">Registro</a>
         <a href="#">Acerca de</a>
         <a href="#">Servicios</a>
         <a href="#">Contacto</a>
