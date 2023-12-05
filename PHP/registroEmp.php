@@ -8,7 +8,7 @@
 <body>
 
 <?php
-        include '../PHP/headerUsr.php'
+        include '../PHP/headerEmp.php'
     ?>
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
@@ -26,6 +26,10 @@
 
   <label id="icon" for="name"><i class="icon-user"></i></label>
   <input type="text" name="name" id="name" placeholder="Name" required/>
+
+  <label id="icon" for="name"><i class="icon-globe"></i></label>
+  <input type="text" name="name" id="name" placeholder="ID" required/>
+
 
   <label id="icon" for="name"><i class="icon-envelope "></i></label>
   <input type="text" name="name" id="name" placeholder="Email" required/>

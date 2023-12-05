@@ -7,10 +7,10 @@
 </head>
 <body>
     <?php
-        include '../PHP/header.php'
+        include '../PHP/headerUsr.php'
     ?>
 
-    <h4>HOLA MUNDO</h4>
+<h4>HOLA MUNDO</h4>
     
 </body>
 </html> 

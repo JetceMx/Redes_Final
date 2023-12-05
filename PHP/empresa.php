@@ -7,9 +7,9 @@
 </head>
 <body>
     <?php
-        include '../PHP/header.php'
+        include '../PHP/headerEmp.php'
     ?>
-
+    
     <h4>HOLA MUNDO</h4>
     
 </body>

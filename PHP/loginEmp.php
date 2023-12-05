@@ -8,7 +8,7 @@
 <body>
 
 <?php
-        include '../PHP/headerUsr.php'
+        include '../PHP/headerEmp.php'
     ?>
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="../CSS/loginusr.css">
 
 <div class="testbox">
-  <h1>Registro</h1>
+  <h1>Log in</h1>
 
   <form action="/">
       <hr>
