@@ -72,23 +72,24 @@
     // Función para manejar el inicio de sesión
     function handleLogin(event) {
       event.preventDefault(); // Evitar que el formulario se envíe
-
       const username = email.value;
       const password = pass.value;
-
-      // Comprobar credenciales (esto puede ser más complejo en una aplicación real)
-      if (username === nombresUsuarios && password === contrasUsuarios) {
+      for (let i = 0; i < emailUsuarios.length; i++) {
+        // Comprobar credenciales (esto puede ser más complejo en una aplicación real)
+        if (username === emailUsuarios[i] && password === contrasUsuarios[i]) {
+          
         // Almacenar la información del usuario en el almacenamiento local
         localStorage.setItem('loggedIn', 'true');
         localStorage.setItem('username', username);
 
         alert('Inicio de sesión exitoso');
         // Redireccionar a otra página o realizar alguna acción después del inicio de sesión
-      } else {
-        alert('Credenciales incorrectas');
+        } else {
+          alert('Credenciales incorrectas');
+        }
       }
+    
     }
-
     // Agregar un event listener al formulario para manejar el inicio de sesión
     form.addEventListener('submit', handleLogin);
   </script>
