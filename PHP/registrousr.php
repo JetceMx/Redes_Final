@@ -26,7 +26,7 @@
       <hr>
 
       <label id="icon" for="name"><i class="icon-globe"></i></label>
-      <input type="text" name="name" id="RU_nombreusr" placeholder="Nombre de Usuario" required/>
+      <input type="text" name="name" id="RU_nombreusr" placeholder="Nombre de Usuario" required />
 
       <label id="icon" for="name"><i class="icon-user"></i></label>
       <input type="text" name="name" id="RU_nombre" placeholder="Nombre" required />
@@ -49,9 +49,9 @@
       event.preventDefault(); // Evita el envío normal del formulario
 
       // Obtiene los datos del formulario
-      const name = document.getElementById('name').value;
-      const edad = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
+      const RU_nombre = document.getElementById('RU_nombre').value;
+      const RU_email = document.getElementById('RU_email').value;
+      const RU_contra = document.getElementById('RU_contra').value;
 
       // Envia los datos al servidor
       fetch('http://192.168.1.75:3000/guardarDatosUsuarios', {
@@ -60,9 +60,9 @@
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            name,
-            edad,
-            password
+            RU_nombre,
+            RU_email,
+            RU_contra
           }),
         })
         .then(response => response.text())
