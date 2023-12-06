@@ -7,11 +7,10 @@
 </head>
 <body>
     <header>
-        <h1>Chamba x Search</h1>
+    <h2><a href="../PHP/Index.php">Chamba x Search</a></h2>
     </header>
 
     <nav>
-        <a href="../PHP/Index.php">Inicio</a>
         <a href="../PHP/loginEmp.php " >Log in</a>
         <a href="../PHP/registroEmp.php">Registro</a>
         <a href="#">Chamba</a>
