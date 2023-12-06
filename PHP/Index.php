@@ -125,8 +125,8 @@
     <br>
     <br>
     <section id="section1" class="about-section">
-        <h2>¿Qué es BuscaEmpleo.com?</h2>
-        <p>BuscaEmpleo.com es una plataforma en línea diseñada para conectar a empleadores y profesionales en busca de oportunidades laborales. Ofrecemos un espacio donde las empresas pueden publicar sus vacantes y los candidatos pueden buscar trabajos que se adapten a sus habilidades y aspiraciones.</p>
+        <h2>¿Chamba x Search?</h2>
+        <p>Chamba x Search es una plataforma en línea diseñada para conectar a empleadores y profesionales en busca de oportunidades laborales. Ofrecemos un espacio donde las empresas pueden publicar sus vacantes y los candidatos pueden buscar trabajos que se adapten a sus habilidades y aspiraciones.</p>
         <p>Nuestra misión es facilitar el proceso de búsqueda de empleo y simplificar la contratación para empleadores. Con BuscaEmpleo.com, encontrar o publicar empleos es rápido, fácil y efectivo.</p>
     </section>
     <br>
