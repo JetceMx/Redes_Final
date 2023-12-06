@@ -18,7 +18,7 @@
 <div class="testbox">
   <h1>Registro</h1>
 
-  <form action="/">
+  <form action="/" id="miFormulario2">
       <hr>
     <div class="accounttype">
     </div>
@@ -47,7 +47,38 @@
    <button class="button" type="submit">Registro</button>
   </form>
 </div>
-    
+<script>
+    document.getElementById('miFormulario2').addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita el envío normal del formulario
+
+      // Obtiene los datos del formulario
+      const name = document.getElementById('RE_nombre').value;
+      const puesto = document.getElementById('RE_puesto').value;
+      const edad = document.getElementById('RE_mail').value;
+      const password = document.getElementById('RE_contra').value;
+
+      // Envia los datos al servidor
+      fetch('http://192.168.1.75:3000/guardarDatosUsuariosEmpresas', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name,
+            puesto,
+            edad,
+            password
+          }),
+        })
+        .then(response => response.text())
+        .then(message => {
+          console.log(message);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    });
+  </script>
 </body>
 </html>
 
