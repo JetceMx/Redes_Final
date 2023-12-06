@@ -11,7 +11,7 @@
     </header>
 
     <nav>
-        <a href="../PHP/usuario.php" >Usuraio</a>
+        <a href="../PHP/usuario.php" >Usuario</a>
         <a href="../PHP/empresa.php">Empresa</a>
         <a href="#">Chamba</a>
     </nav>
