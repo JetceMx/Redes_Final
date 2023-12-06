@@ -31,35 +31,64 @@
             <input type="password" name="name" id="LE_contra" placeholder="Password" required />
 
             <p id="parrafo">Si estas de acuerdo con nuestros <a href="#">terminos y condiciones</a> Da click en Registrar </p>
-            <button class="button" type="submit">Registro</button>
+            <button class="button" type="submit" onclick="handleLogin()">Ingrear</button>
             </form>
         </div>
     </div>
 
     <script>
-        // Realiza una solicitud para obtener los datos de usuarios desde el servidor
-        fetch('http://192.168.1.75:3000/obtenerUsuariosEmpresas')
-            .then(response => response.json())
-            .then(datos => {
+        function handleLogin() {
+            const RE_mail = document.getElementById('LE_mail').value;
+            const RE_contra = document.getElementById('LE_contra').value;
 
-                // Extrae solo los nombres de los usuarios
-                const uid = datos.map(usuario => usuario.uid);
-                const nombres = datos.map(usuario => usuario.nombre);
-                const puesto = datos.map(usuario => usuario.puesto);
-                const emailsUsuarios = datos.map(usuario => usuario.email);
-                const contrasUsuarios = datos.map(usuario => usuario.contra);
+            // Llamada a la función para iniciar sesión
+            loginUser(RE_mail, RE_contra);
+        }
 
-                // Trabaja con los nombres como desees
-                console.log('Identificador unico:', uid);
-                console.log('Nombres de usuario:', nombres);
-                console.log('Puestos de los usuarios:', puesto);
-                console.log('Emails de usuarios:', emailsUsuarios);
-                console.log('Contraseñas de usuarios:', contrasUsuarios);
+        function loginUser(RE_mail, RE_contra) {
+            // Ruta al archivo JSON
+            const jsonFilePath = 'http://192.168.1.75:3000/obtenerUsuariosEmpresas';
 
-            })
-            .catch(error => console.error('Error al obtener datos:', error));
+            // Realizar la petición para obtener los datos del JSON
+            fetch(jsonFilePath)
+                .then(response => response.json())
+                .then(data => {
+                    // Verificar credenciales
+                    let credencialesCorrectas = false;
+
+                    data.forEach(usuario => {
+                        const usuarioEmail = usuario.RE_mail;
+                        const usuarioContra = usuario.RE_contra;
+
+                        console.log("Comparando con usuario:", usuario);
+
+                        if (usuarioEmail === RE_mail && usuarioContra === RE_contra) {
+                            credencialesCorrectas = true;
+                            // Almacenar la información del usuario en el almacenamiento local
+                            localStorage.setItem('loggedIn', 'true');
+                            localStorage.setItem('user', RE_mail);
+
+                            alert('Inicio de sesión exitoso');
+                            // Redireccionar a otra página después del inicio de sesión
+                            window.location.href = '../PHP/Index.php';
+                        } else {
+                            console.log("Comparando con correo electrónico:", RE_mail, "y contraseña:", RE_contra, "para el usuario:", usuarioEmail);
+                        }
+                    });
+
+                    // Si no se encontraron credenciales válidas
+                    if (!credencialesCorrectas) {
+                        console.log("Credenciales incorrectas para el correo electrónico:", RE_mail);
+                        alert('Credenciales incorrectas');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al cargar el JSON:', error);
+                    alert('Error al cargar los datos. Por favor, inténtalo de nuevo.');
+                });
+        }
     </script>
-</div>
+    </div>
 
     <?php
     include '../PHP/piepagina.php'

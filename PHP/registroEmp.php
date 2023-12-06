@@ -40,51 +40,54 @@
         <label id="icon" for="name"><i class="icon-shield"></i></label>
         <input type="password" name="name" id="RE_contra" placeholder="Contraseña" required />
 
-      <p id="parrafo">Si estas de acuerdo con nuestros<a href="#">terminos y condiciones</a> Da click en Registrar </p>
-      <button style="background-color: #1465bb; color: white;" class="button" type="submit">Registro</button>
-    </form>
-  </div>
+        <p id="parrafo">Si estas de acuerdo con nuestros<a href="#">terminos y condiciones</a> Da click en Registrar </p>
+        <button style="background-color: #1465bb; color: white;" class="button" type="submit">Registro</button>
+      </form>
+    </div>
 
-  <script>
-    document.getElementById('miFormulario2').addEventListener('submit', function(event) {
-      event.preventDefault(); // Evita el envío normal del formulario
+    <!-- Incluye la biblioteca uuid en tu HTML -->
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
 
-      // Obtiene los datos del formulario
-      const RE_nombre = document.getElementById('RE_nombre').value;
-      const RE_puesto = document.getElementById('RE_puesto').value;
-      const RE_mail = document.getElementById('RE_mail').value;
-      const RE_contra = document.getElementById('RE_contra').value;
+    <script>
+      document.getElementById('miFormulario2').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita el envío normal del formulario
 
-      // Genera un identificador único para cada registro
-      const RE_id = uuidv4();
+        // Obtiene los datos del formulario
+        const RE_nombre = document.getElementById('RE_nombre').value;
+        const RE_puesto = document.getElementById('RE_puesto').value;
+        const RE_mail = document.getElementById('RE_mail').value;
+        const RE_contra = document.getElementById('RE_contra').value;
 
-      // Envia los datos al servidor
-      fetch('http://192.168.1.75:3000/guardarDatosUsuariosEmpresas', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            RE_id,
-            RE_nombre,
-            RE_puesto,
-            RE_mail,
-            RE_contra
-          }),
-        })
-        .then(response => response.text())
-        .then(message => {
-          console.log(message);
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
-    });
-  </script>
+        // Genera un identificador único para cada registro
+        const RE_id = uuidv4();
 
-  <?php
-  include '../PHP/piepagina.php'
-  ?>
+        // Envia los datos al servidor
+        fetch('http://192.168.1.75:3000/guardarDatosUsuariosEmpresas', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              RE_id,
+              RE_nombre,
+              RE_puesto,
+              RE_mail,
+              RE_contra
+            }),
+          })
+          .then(response => response.text())
+          .then(message => {
+            console.log(message);
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+      });
+    </script>
+
+    <?php
+    include '../PHP/piepagina.php'
+    ?>
 
 </body>
 

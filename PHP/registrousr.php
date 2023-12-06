@@ -18,32 +18,32 @@
   <link rel="stylesheet" href="../CSS/loginusr.css">
 
   <div id="contenedor">
-  <div class="testbox">
-    <h1>Registro</h1>
-    <form id="miFormulario">
-      <hr>
-      <div class="accounttype">
-      </div>
-      <hr>
+    <div class="testbox">
+      <h1>Registro</h1>
+      <form id="miFormulario">
+        <hr>
+        <div class="accounttype">
+        </div>
+        <hr>
 
-      <label id="icon" for="name"><i class="icon-globe"></i></label>
-      <input type="text" name="name" id="RU_nombreusr" placeholder="Nombre de Usuario" required />
+        <label id="icon" for="name"><i class="icon-globe"></i></label>
+        <input type="text" name="name" id="RU_nombreusr" placeholder="Nombre de Usuario" required />
 
-      <label id="icon" for="name"><i class="icon-user"></i></label>
-      <input type="text" name="name" id="RU_nombre" placeholder="Nombre" required />
+        <label id="icon" for="name"><i class="icon-user"></i></label>
+        <input type="text" name="name" id="RU_nombre" placeholder="Nombre" required />
 
-      <label id="icon" for="name"><i class="icon-envelope "></i></label>
-      <input type="text" name="name" id="RU_email" placeholder="Email" required />
+        <label id="icon" for="name"><i class="icon-envelope "></i></label>
+        <input type="text" name="name" id="RU_email" placeholder="Email" required />
 
-      <label id="icon" for="name"><i class="icon-shield"></i></label>
-      <input type="password" name="name" id="RU_contra" placeholder="Contraseña" required />
+        <label id="icon" for="name"><i class="icon-shield"></i></label>
+        <input type="password" name="name" id="RU_contra" placeholder="Contraseña" required />
 
-      <br>
-      <br>
-      <p id="parrafo">Si estas de acuerdo con nuestros <a href="#">terminos y condiciones</a> Da click en Registrar </p>
-      <button style="background-color: #1465bb; color: white;" class="button" type="submit">Registro</button>
-    </form>
-  </div>
+        <br>
+        <br>
+        <p id="parrafo">Si estas de acuerdo con nuestros <a href="#">terminos y condiciones</a> Da click en Registrar </p>
+        <button style="background-color: #1465bb; color: white;" class="button" type="submit">Registro</button>
+      </form>
+    </div>
   </div>
 
   <!-- Incluye la biblioteca uuid en tu HTML -->
@@ -56,13 +56,13 @@
       event.preventDefault(); // Evita el envío normal del formulario
 
       // Obtiene los datos del formulario
-      const RU_nombreusr = document.getElementById('RU_nombreusr').value;
-      const RU_nombre = document.getElementById('RU_nombre').value;
-      const RU_email = document.getElementById('RU_email').value;
-      const RU_contra = document.getElementById('RU_contra').value;
+      const nombreusr = document.getElementById('RU_nombreusr').value;
+      const nombre = document.getElementById('RU_nombre').value;
+      const email = document.getElementById('RU_email').value;
+      const contra = document.getElementById('RU_contra').value;
 
       // Genera un identificador único para cada registro
-      const RU_id = uuidv4();
+      const uid = uuidv4();
 
       // Envia los datos al servidor
       fetch('http://192.168.1.75:3000/guardarDatosUsuarios', {
@@ -71,11 +71,11 @@
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            RU_id,
-            RU_nombreusr,
-            RU_nombre,
-            RU_email,
-            RU_contra
+            uid: uid,
+            nombre_usr: nombreusr,
+            nombre: nombre,
+            email: email,
+            contra: contra
           }),
         })
         .then(response => response.text())
