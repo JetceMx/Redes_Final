@@ -3,13 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <style>
+        .testimonial {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .testimonial img {
+            border-radius: 50%;
+            max-width: 100px;
+            height: auto;
+        }
+
+        .about-section {
+            text-align: center;
+            padding: 30px;
+            background-color: #f9f9f9;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -108,7 +123,12 @@
 
     <br>
     <br>
-    
+    <br>
+    <section id="section1" class="about-section">
+        <h2>¿Qué es BuscaEmpleo.com?</h2>
+        <p>BuscaEmpleo.com es una plataforma en línea diseñada para conectar a empleadores y profesionales en busca de oportunidades laborales. Ofrecemos un espacio donde las empresas pueden publicar sus vacantes y los candidatos pueden buscar trabajos que se adapten a sus habilidades y aspiraciones.</p>
+        <p>Nuestra misión es facilitar el proceso de búsqueda de empleo y simplificar la contratación para empleadores. Con BuscaEmpleo.com, encontrar o publicar empleos es rápido, fácil y efectivo.</p>
+    </section>
     <br>
     <br>
 
