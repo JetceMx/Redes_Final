@@ -21,17 +21,17 @@
   <div class="testbox">
     <h1>Iniciar sesion</h1>
 
-    <form action="/">
-      <hr>
-      <div class="accounttype">
+      <form action="/">
+        <hr>
+        <div class="accounttype">
 
-      </div>
-      <hr>
-      <label id="icon" for="name"><i class="icon-envelope "></i></label>
-      <input type="text" name="name" id="LU_email" placeholder="Email" required />
+        </div>
+        <hr>
+        <label id="icon" for="name"><i class="icon-envelope "></i></label>
+        <input type="text" name="name" id="LU_email" placeholder="Email" required />
 
-      <label id="icon" for="name"><i class="icon-user"></i></label>
-      <input type="password" name="name" id="LU_contra" placeholder="Contraseña" required />
+        <label id="icon" for="name"><i class="icon-user"></i></label>
+        <input type="password" name="name" id="LU_contra" placeholder="Contraseña" required />
 
       <p id="parrafo">Si estas de acuerdo con nuestros<a href="#">terminos y condiciones</a> Da click en Registrar </p>
       <button style="background-color: #1465bb; color: white;" class="button" type="submit">Iniciar sesion</button>
@@ -39,7 +39,7 @@
   </div>
 
   </div>
-  
+
 
   <!-- Aquí puedes mostrar los datos como desees en tu interfaz de usuario -->
   <div id="datosUsuarios"></div>
@@ -74,24 +74,24 @@
 
     // Función para manejar el inicio de sesión
     function handleLogin(event) {
-      event.preventDefault(); // Evitar que el formulario se envíe
+      // event.preventDefault(); // Evitar que el formulario se envíe
       const username = email.value;
       const password = pass.value;
       for (let i = 0; i < emailUsuarios.length; i++) {
         // Comprobar credenciales (esto puede ser más complejo en una aplicación real)
         if (username === emailUsuarios[i] && password === contrasUsuarios[i]) {
-          
-        // Almacenar la información del usuario en el almacenamiento local
-        localStorage.setItem('loggedIn', 'true');
-        localStorage.setItem('username', username);
 
-        alert('Inicio de sesión exitoso');
-        // Redireccionar a otra página o realizar alguna acción después del inicio de sesión
+          // Almacenar la información del usuario en el almacenamiento local
+          localStorage.setItem('loggedIn', 'true');
+          localStorage.setItem('username', username);
+
+          alert('Inicio de sesión exitoso');
+          // Redireccionar a otra página o realizar alguna acción después del inicio de sesión
         } else {
           alert('Credenciales incorrectas');
         }
       }
-    
+
     }
     // Agregar un event listener al formulario para manejar el inicio de sesión
     form.addEventListener('submit', handleLogin);
