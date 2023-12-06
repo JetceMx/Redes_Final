@@ -65,6 +65,34 @@
 
       })
       .catch(error => console.error('Error al obtener datos:', error));
+
+      // Obtener referencia al formulario y a los campos de entrada
+      const form = document.getElementById('miFormulario3');
+      const email = document.getElementById('LU_email');
+      const pass = document.getElementById('LU_contra');
+
+      // Función para manejar el inicio de sesión
+      function handleLogin(event) {
+          event.preventDefault(); // Evitar que el formulario se envíe
+
+          const username = email.value;
+          const password = pass.value;
+
+          // Comprobar credenciales (esto puede ser más complejo en una aplicación real)
+          if (username === nombresUsuarios && password === contrasUsuarios) {
+              // Almacenar la información del usuario en el almacenamiento local
+              localStorage.setItem('loggedIn', 'true');
+              localStorage.setItem('username', username);
+
+              alert('Inicio de sesión exitoso');
+              // Redireccionar a otra página o realizar alguna acción después del inicio de sesión
+          } else {
+              alert('Credenciales incorrectas');
+          }
+      }
+
+      // Agregar un event listener al formulario para manejar el inicio de sesión
+      form.addEventListener('submit', handleLogin);
   </script>
 
 
