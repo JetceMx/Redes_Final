@@ -21,7 +21,7 @@
   <div class="testbox">
     <h1>Iniciar sesion</h1>
 
-      <form action="/">
+      <form action="/" id="miFormulario3">
         <hr>
         <div class="accounttype">
 
@@ -46,6 +46,7 @@
 
   <script>
     // Realiza una solicitud para obtener los datos de usuarios desde el servidor
+    console.log("estoy en el script")
     fetch('http://192.168.1.75:3000/obtenerUsuarios')
       .then(response => response.json())
       .then(datos => {
@@ -58,16 +59,55 @@
         const contrasUsuarios = datos.map(usuario => usuario.contra);
 
         // Trabaja con los nombres como desees
+        console.log("aqui son los datos")
         console.log('Identificador unico:', uid);
         console.log('Nombres de usuario:', nombresUsuarios);
         console.log('Nombres de los usuarios:', nombres);
         console.log('Emails de usuarios:', emailsUsuarios);
         console.log('Contraseñas de usuarios:', contrasUsuarios);
 
+
+        // Extraer solo los nombres de los usuarios
+        const emailsUsuarios = datos.map(usuario => usuario.email);
+        const contrasUsuarios = datos.map(usuario => usuario.contra);
+
+        // Obtener referencia al formulario y a los campos de entrada
+        const form = document.getElementById('miFormulario3');
+        const email = document.getElementById('LU_email');
+        const pass = document.getElementById('LU_contra');
+
+        // Función para manejar el inicio de sesión
+        function handleLogin(event) {
+          const user = email.value;
+          const password = pass.value;
+
+          for (let i = 0; i < emailsUsuarios.length; i++) {
+            // Comprobar credenciales
+            if (username === emailsUsuarios[i] && password === contrasUsuarios[i]) {
+              // Almacenar la información del usuario en el almacenamiento local
+              localStorage.setItem('loggedIn', 'true');
+              localStorage.setItem('user', user);
+
+              alert('Inicio de sesión exitoso');
+              // Redireccionar a otra página después del inicio de sesión
+              window.location.href = '../PHP/loginUsr.php';
+              return; // Salir del bucle si se encontraron credenciales válidas
+            }
+          }
+          // Si no se encontraron credenciales válidas
+          alert('Credenciales incorrectas');
+        }
+
+        // Asignar la función de manejo al evento submit del formulario
+        form.addEventListener('submit', function(event) {
+          event.preventDefault(); // Evitar el envío del formulario
+          handleLogin(event); // Llamar a la función de manejo de inicio de sesión
+        });
+
       })
       .catch(error => console.error('Error al obtener datos:', error));
 
-    // Obtener referencia al formulario y a los campos de entrada
+    /* Obtener referencia al formulario y a los campos de entrada
     const form = document.getElementById('miFormulario3');
     const email = document.getElementById('LU_email');
     const pass = document.getElementById('LU_contra');
@@ -77,7 +117,7 @@
       // event.preventDefault(); // Evitar que el formulario se envíe
       const username = email.value;
       const password = pass.value;
-      for (let i = 0; i < emailUsuarios.length; i++) {
+      for (let i = 0; i < emailsUsuarios.length; i++) {
         // Comprobar credenciales (esto puede ser más complejo en una aplicación real)
         if (username === emailUsuarios[i] && password === contrasUsuarios[i]) {
 
@@ -94,7 +134,7 @@
 
     }
     // Agregar un event listener al formulario para manejar el inicio de sesión
-    form.addEventListener('submit', handleLogin);
+    //form.addEventListener('submit', handleLogin);*/
   </script>
 
 

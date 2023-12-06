@@ -51,6 +51,7 @@
 
 
   <script>
+    console.log("estoy en el script")
     document.getElementById('miFormulario').addEventListener('submit', function(event) {
       event.preventDefault(); // Evita el envío normal del formulario
 
