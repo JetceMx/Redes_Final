@@ -18,6 +18,10 @@ select {
   color: #4c4c4c;
 }
 
+#contenedor{
+  min-height: calc(85vh - 70px);
+}
+
 #parrafo {
   font-size: 12px;
   width: 150px;

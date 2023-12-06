@@ -15,6 +15,7 @@
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 <link rel="stylesheet" href="../CSS/loginusr.css">
 
+<div id="contenedor">
 <div class="testbox">
   <h1>Log in</h1>
 
@@ -36,6 +37,7 @@
    <p id="parrafo">Si estas de acuerdo con nuestros <a href="#">terminos y condiciones</a> Da click en Registrar </p>
       <button class="button" type="submit">Registro</button>
   </form>
+</div>
 </div>
 
     <?php

@@ -17,6 +17,7 @@
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" href="../CSS/loginusr.css">
 
+  <div id="contenedor">
   <div class="testbox">
     <h1>Registro</h1>
 
@@ -43,6 +44,8 @@
       <button class="button" type="submit">Registro</button>
     </form>
   </div>
+  </div>
+  
   <script>
     document.getElementById('miFormulario2').addEventListener('submit', function(event) {
       event.preventDefault(); // Evita el envío normal del formulario

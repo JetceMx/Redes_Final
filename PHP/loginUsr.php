@@ -17,7 +17,7 @@
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" href="../CSS/loginusr.css">
 
-
+  <div id="contenedor">
   <div class="testbox">
     <h1>Log In</h1>
 
@@ -37,6 +37,9 @@
       <button class="button" type="submit">Registro</button>
     </form>
   </div>
+
+  </div>
+  
 
   <!-- Aquí puedes mostrar los datos como desees en tu interfaz de usuario -->
   <div id="datosUsuarios"></div>
