@@ -75,6 +75,10 @@
     });
   </script>
 
+    <?php
+        include '../PHP/piepagina.php'
+    ?>
+
 </body>
 
 </html>

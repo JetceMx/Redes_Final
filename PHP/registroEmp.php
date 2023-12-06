@@ -39,12 +39,6 @@
       <label id="icon" for="name"><i class="icon-shield"></i></label>
       <input type="password" name="name" id="RE_contra" placeholder="Contraseña" required />
 
-      <div class="gender">
-        <input type="radio" value="None" id="male" name="gender" checked />
-        <label for="male" class="radio" chec>Masculino</label>
-        <input type="radio" value="None" id="female" name="gender" />
-        <label for="female" class="radio">Femenino</label>
-      </div>
       <p>Si estas de acuerdo con nuestros<a href="#">terminos y condiciones</a> Da click en Registrar </p>
       <button class="button" type="submit">Registro</button>
     </form>
@@ -81,6 +75,11 @@
         });
     });
   </script>
+
+    <?php
+        include '../PHP/piepagina.php'
+    ?>
+
 </body>
 
 </html>

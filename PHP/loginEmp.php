@@ -37,6 +37,10 @@
       <button class="button" type="submit">Registro</button>
   </form>
 </div>
+
+    <?php
+        include '../PHP/piepagina.php'
+    ?>
     
 </body>
 </html>

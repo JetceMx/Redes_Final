@@ -11,6 +11,10 @@
     ?>
     
     <h4>HOLA MUNDO</h4>
+
+    <?php
+        include '../PHP/piepagina.php'
+    ?>
     
 </body>
 </html> 
