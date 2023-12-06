@@ -7,7 +7,7 @@
 </head>
 <body>
     <header>
-    <h2><a href="../PHP/Index.php">Chamba x Search</a></h2>
+    <nav id="head"><a href="../PHP/Index.php"><h2>Chamba x Search</h2></a></nav>
     </header>
 
     <nav>

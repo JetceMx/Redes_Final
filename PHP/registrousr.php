@@ -25,6 +25,9 @@
       </div>
       <hr>
 
+      <label id="icon" for="name"><i class="icon-globe"></i></label>
+      <input type="text" name="name" id="RU_nombreusr" placeholder="Nombre de Usuario" required/>
+
       <label id="icon" for="name"><i class="icon-user"></i></label>
       <input type="text" name="name" id="RU_nombre" placeholder="Nombre" required />
 
@@ -33,6 +36,7 @@
 
       <label id="icon" for="name"><i class="icon-shield"></i></label>
       <input type="text" name="name" id="RU_contra" placeholder="Contraseña" required />
+
       <br>
       <br>
       <p>Si estas de acuerdo con nuestros <a href="#">terminos y condiciones</a> Da click en Registrar </p>
