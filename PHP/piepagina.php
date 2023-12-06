@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/piepagina.css">
 </head>
-<body>
+<body id="cuerpo">
 
 <!-- Contenido de la página -->
 
-<footer>
+<footer id="foot">
     <div class="footer-content">
         <div class="footer-info">
             <h2>Chamba x Search</h2>

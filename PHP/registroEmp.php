@@ -39,7 +39,7 @@
       <label id="icon" for="name"><i class="icon-shield"></i></label>
       <input type="password" name="name" id="RE_contra" placeholder="Contraseña" required />
 
-      <p>Si estas de acuerdo con nuestros<a href="#">terminos y condiciones</a> Da click en Registrar </p>
+      <p id="parrafo">Si estas de acuerdo con nuestros<a href="#">terminos y condiciones</a> Da click en Registrar </p>
       <button class="button" type="submit">Registro</button>
     </form>
   </div>

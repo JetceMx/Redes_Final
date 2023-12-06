@@ -39,7 +39,7 @@
 
       <br>
       <br>
-      <p>Si estas de acuerdo con nuestros <a href="#">terminos y condiciones</a> Da click en Registrar </p>
+      <p id="parrafo">Si estas de acuerdo con nuestros <a href="#">terminos y condiciones</a> Da click en Registrar </p>
       <button class="button" type="submit">Registro</button>
     </form>
   </div>

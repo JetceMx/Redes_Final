@@ -1,10 +1,10 @@
-body {
+#cuerpo {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
 }
 
-footer {
+#foot{
     background-color: #333;
     color: #fff;
     text-align: center;
