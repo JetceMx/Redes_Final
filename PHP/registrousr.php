@@ -35,7 +35,7 @@
       <input type="text" name="name" id="RU_email" placeholder="Email" required />
 
       <label id="icon" for="name"><i class="icon-shield"></i></label>
-      <input type="text" name="name" id="RU_contra" placeholder="Contraseña" required />
+      <input type="password" name="name" id="RU_contra" placeholder="Contraseña" required />
 
       <br>
       <br>
@@ -44,14 +44,22 @@
     </form>
   </div>
 
+  <!-- Incluye la biblioteca uuid en tu HTML -->
+  <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+
+
   <script>
     document.getElementById('miFormulario').addEventListener('submit', function(event) {
       event.preventDefault(); // Evita el envío normal del formulario
 
       // Obtiene los datos del formulario
+      const RU_nombreusr = document.getElementById('RU_nombreusr').value;
       const RU_nombre = document.getElementById('RU_nombre').value;
       const RU_email = document.getElementById('RU_email').value;
       const RU_contra = document.getElementById('RU_contra').value;
+
+      // Genera un identificador único para cada registro
+      const RU_id = uuidv4();
 
       // Envia los datos al servidor
       fetch('http://192.168.1.75:3000/guardarDatosUsuarios', {
@@ -60,6 +68,8 @@
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
+            RU_id,
+            RU_nombreusr,
             RU_nombre,
             RU_email,
             RU_contra
@@ -75,9 +85,9 @@
     });
   </script>
 
-    <?php
-        include '../PHP/piepagina.php'
-    ?>
+  <?php
+  include '../PHP/piepagina.php'
+  ?>
 
 </body>
 

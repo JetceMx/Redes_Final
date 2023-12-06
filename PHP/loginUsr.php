@@ -48,53 +48,57 @@
       .then(datos => {
 
         // Extrae solo los nombres de los usuarios
-        const nombresUsuarios = datos.map(usuario => usuario.nombre);
+        const uid = datos.map(usuario => usuario.uid);
+        const nombresUsuarios = datos.map(usuario => usuario.nombre_usr);
+        const nombres = datos.map(usuario => usuario.nombre);
         const emailsUsuarios = datos.map(usuario => usuario.email);
         const contrasUsuarios = datos.map(usuario => usuario.contra);
 
         // Trabaja con los nombres como desees
-        console.log('Nombres de usuarios:', nombresUsuarios);
+        console.log('Identificador unico:', uid);
+        console.log('Nombres de usuario:', nombresUsuarios);
+        console.log('Nombres de los usuarios:', nombres);
         console.log('Emails de usuarios:', emailsUsuarios);
         console.log('Contraseñas de usuarios:', contrasUsuarios);
 
       })
       .catch(error => console.error('Error al obtener datos:', error));
 
-      // Obtener referencia al formulario y a los campos de entrada
-      const form = document.getElementById('miFormulario3');
-      const email = document.getElementById('LU_email');
-      const pass = document.getElementById('LU_contra');
+    // Obtener referencia al formulario y a los campos de entrada
+    const form = document.getElementById('miFormulario3');
+    const email = document.getElementById('LU_email');
+    const pass = document.getElementById('LU_contra');
 
-      // Función para manejar el inicio de sesión
-      function handleLogin(event) {
-          event.preventDefault(); // Evitar que el formulario se envíe
+    // Función para manejar el inicio de sesión
+    function handleLogin(event) {
+      event.preventDefault(); // Evitar que el formulario se envíe
 
-          const username = email.value;
-          const password = pass.value;
+      const username = email.value;
+      const password = pass.value;
 
-          // Comprobar credenciales (esto puede ser más complejo en una aplicación real)
-          if (username === nombresUsuarios && password === contrasUsuarios) {
-              // Almacenar la información del usuario en el almacenamiento local
-              localStorage.setItem('loggedIn', 'true');
-              localStorage.setItem('username', username);
+      // Comprobar credenciales (esto puede ser más complejo en una aplicación real)
+      if (username === nombresUsuarios && password === contrasUsuarios) {
+        // Almacenar la información del usuario en el almacenamiento local
+        localStorage.setItem('loggedIn', 'true');
+        localStorage.setItem('username', username);
 
-              alert('Inicio de sesión exitoso');
-              // Redireccionar a otra página o realizar alguna acción después del inicio de sesión
-          } else {
-              alert('Credenciales incorrectas');
-          }
+        alert('Inicio de sesión exitoso');
+        // Redireccionar a otra página o realizar alguna acción después del inicio de sesión
+      } else {
+        alert('Credenciales incorrectas');
       }
+    }
 
-      // Agregar un event listener al formulario para manejar el inicio de sesión
-      form.addEventListener('submit', handleLogin);
+    // Agregar un event listener al formulario para manejar el inicio de sesión
+    form.addEventListener('submit', handleLogin);
   </script>
 
 
 
-<?php
-        include '../PHP/piepagina.php'
-    ?>
-    
+  <?php
+  include '../PHP/piepagina.php'
+  ?>
+
 </body>
 
 </html>
