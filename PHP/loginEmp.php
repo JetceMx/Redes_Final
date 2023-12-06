@@ -17,7 +17,7 @@
 
 <div id="contenedor">
 <div class="testbox">
-  <h1>Log in</h1>
+  <h1>Iniciar sesion</h1>
 
   <form action="/">
       <hr>
@@ -35,7 +35,7 @@
   <input type="password" name="name" id="LE_contra" placeholder="Password" required/>
 
    <p id="parrafo">Si estas de acuerdo con nuestros <a href="#">terminos y condiciones</a> Da click en Registrar </p>
-      <button class="button" type="submit">Registro</button>
+      <button style="background-color: #1465bb; color: white;" class="button" type="submit">Iniciar sesion</button>
   </form>
 </div>
 </div>

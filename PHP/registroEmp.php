@@ -41,7 +41,7 @@
       <input type="password" name="name" id="RE_contra" placeholder="Contraseña" required />
 
       <p id="parrafo">Si estas de acuerdo con nuestros<a href="#">terminos y condiciones</a> Da click en Registrar </p>
-      <button class="button" type="submit">Registro</button>
+      <button style="background-color: #1465bb; color: white;" class="button" type="submit">Registro</button>
     </form>
   </div>
   </div>

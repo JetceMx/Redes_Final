@@ -11,7 +11,7 @@
     </header>
 
     <nav>
-        <a href="../PHP/loginUsr.php " >Log in</a>
+        <a href="../PHP/loginUsr.php " >Iniciar sesion</a>
         <a href="../PHP/registrousr.php">Registro</a>
         <a href="#">Chamba</a>
     </nav>
