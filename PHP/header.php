@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../CSS/header.css">
 </head>
 <body>
+    
     <header>
         <nav id="head"><a href="../PHP/Index.php"><h2>Chamba x Search</h2></a></nav>
     </header>
