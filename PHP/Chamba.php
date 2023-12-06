@@ -17,7 +17,9 @@
 <link href="https://serpapi.com/search.json?engine=google_jobs&q=Desarrollador&location=Mexico&google_domain=google.com.mx&gl=mx&hl=es&api_key=7585e535ff6150e5560c96925641c5cad34eae29718a8ce7b357affd735a7883" rel="stylesheet">
 <link rel="stylesheet" href="../CSS/loginusr.css">
 
+
 <?php
+/*
 
 $url = 'https://serpapi.com/search.json?engine=google_jobs&q=Desarrollador&location=Mexico&google_domain=google.com.mx&gl=mx&hl=es&api_key=7585e535ff6150e5560c96925641c5cad34eae29718a8ce7b357affd735a7883';
 
@@ -36,7 +38,30 @@ $query = [
 $search = new GoogleSearch('7585e535ff6150e5560c96925641c5cad34eae29718a8ce7b357affd735a7883');
 $result = $search->get_json($query);
 
+*/
+
+$url = 'https://serpapi.com/search.json?engine=google_jobs&q=Desarrollador&location=Mexico&google_domain=google.com.mx&gl=mx&hl=es&api_key=7585e535ff6150e5560c96925641c5cad34eae29718a8ce7b357affd735a7883';
+$json = file_get_contents($url);
+$datos = json_decode($json,true);
+
+$nombre = $datos["jobs_results"][0]["title"];
+$compania = $datos["jobs_results"][0]["company_name"];
+$locacion = $datos["jobs_results"][0]["location"];
+$via = $datos["jobs_results"][0]["via"];
+
+echo "El nombre de la chamba es: " .$nombre;
+echo "<br>";
+echo "El nombre de la compañia es: " .$compania;
+echo "<br>";
+echo "El lugar es en: " .$locacion;
+echo "<br>";
+echo "El metodo de contacto es: " .$via;
+
+
+
+
 ?>
+
     
 </body>
 </html>
