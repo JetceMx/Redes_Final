@@ -66,6 +66,10 @@ $nombre = $datos["jobs_results"][0]["title"];
 $compania = $datos["jobs_results"][0]["company_name"];
 $locacion = $datos["jobs_results"][0]["location"];
 $via = $datos["jobs_results"][0]["via"];
+$info = $datos["jobs_results"][0]["description"];
+$link = $datos["jobs_results"][0]["related_links"][0]["link"];
+
+
 ?>
 
 <div class="container mt-5">
@@ -75,8 +79,11 @@ $via = $datos["jobs_results"][0]["via"];
         $url = 'https://serpapi.com/search.json?engine=google_jobs&q=Desarrollador&location=Mexico&google_domain=google.com.mx&gl=mx&hl=es&api_key=7585e535ff6150e5560c96925641c5cad34eae29718a8ce7b357affd735a7883';
         $json = file_get_contents($url);
         $datos = json_decode($json,true);
+        $dato = 0;
 
         if ($datos !== null) {
+
+            /*
             echo '<table class="table">';
             echo '<thead class="thead-dark">';
             echo '<tr>';
@@ -88,7 +95,6 @@ $via = $datos["jobs_results"][0]["via"];
             echo '</thead>';
             echo '<tbody>';
 
-            foreach ($datos as $dato) {
                 echo '<tr>';
                 echo '<td>' . $nombre = $datos["jobs_results"][0]["title"];  '</td>';
                 echo '<td>' . $compania = $datos["jobs_results"][0]["company_name"];  '</td>';
@@ -96,15 +102,167 @@ $via = $datos["jobs_results"][0]["via"];
                 echo '<td>' . $via = $datos["jobs_results"][0]["via"];  '</td>';
                 echo '</tr>';
                 echo '<tr>';
-                echo '<td>' . $nombre = $datos["jobs_results"][0]["title"];  '</td>';
-                echo '<td>' . $compania = $datos["jobs_results"][0]["company_name"];  '</td>';
-                echo '<td>' . $locacion = $datos["jobs_results"][0]["location"];  '</td>';
-                echo '<td>' . $via = $datos["jobs_results"][0]["via"];  '</td>';
+                echo '<td>' . $nombre = $datos["jobs_results"][1]["title"];  '</td>';
+                echo '<td>' . $compania = $datos["jobs_results"][1]["company_name"];  '</td>';
+                echo '<td>' . $locacion = $datos["jobs_results"][1]["location"];  '</td>';
+                echo '<td>' . $via = $datos["jobs_results"][1]["via"];  '</td>';
                 echo '</tr>';
-            }
+                echo '<tr>';
+                echo '<td>' . $nombre = $datos["jobs_results"][2]["title"];  '</td>';
+                echo '<td>' . $compania = $datos["jobs_results"][2]["company_name"];  '</td>';
+                echo '<td>' . $locacion = $datos["jobs_results"][2]["location"];  '</td>';
+                echo '<td>' . $via = $datos["jobs_results"][2]["via"];  '</td>';
+                echo '</tr>';
+                echo '<tr>';
+                echo '<td>' . $nombre = $datos["jobs_results"][3]["title"];  '</td>';
+                echo '<td>' . $compania = $datos["jobs_results"][3]["company_name"];  '</td>';
+                echo '<td>' . $locacion = $datos["jobs_results"][3]["location"];  '</td>';
+                echo '<td>' . $via = $datos["jobs_results"][3]["via"];  '</td>';
+                echo '</tr>';
+                echo '<tr>';
+                echo '<td>' . $nombre = $datos["jobs_results"][4]["title"];  '</td>';
+                echo '<td>' . $compania = $datos["jobs_results"][4]["company_name"];  '</td>';
+                echo '<td>' . $locacion = $datos["jobs_results"][4]["location"];  '</td>';
+                echo '<td>' . $via = $datos["jobs_results"][4]["via"];  '</td>';
+                echo '</tr>';
+                echo '<tr>';
+                echo '<td>' . $nombre = $datos["jobs_results"][5]["title"];  '</td>';
+                echo '<td>' . $compania = $datos["jobs_results"][5]["company_name"];  '</td>';
+                echo '<td>' . $locacion = $datos["jobs_results"][5]["location"];  '</td>';
+                echo '<td>' . $via = $datos["jobs_results"][5]["via"];  '</td>';
+                echo '</tr>';
+                echo '<tr>';
+                echo '<td>' . $nombre = $datos["jobs_results"][6]["title"];  '</td>';
+                echo '<td>' . $compania = $datos["jobs_results"][6]["company_name"];  '</td>';
+                echo '<td>' . $locacion = $datos["jobs_results"][6]["location"];  '</td>';
+                echo '<td>' . $via = $datos["jobs_results"][6]["via"];  '</td>';
+                echo '</tr>';
+                echo '<tr>';
+                echo '<td>' . $nombre = $datos["jobs_results"][7]["title"];  '</td>';
+                echo '<td>' . $compania = $datos["jobs_results"][7]["company_name"];  '</td>';
+                echo '<td>' . $locacion = $datos["jobs_results"][7]["location"];  '</td>';
+                echo '<td>' . $via = $datos["jobs_results"][7]["via"];  '</td>';
+                echo '</tr>';
+            
 
             echo '</tbody>';
             echo '</table>';
+*/
+            echo '<div>';
+            echo '<div class="card" style="width: 18rem;">';
+            echo '<img src="../IMG/ids.png" class="card-img-top" alt="...">';
+            echo '<div class="card-body">';
+            echo '<h5 class="card-title"> La Chamba es: <br> ' .$nombre = $datos["jobs_results"][0]["title"] .'</h5>';
+            echo '</div>';
+            echo '<ul class="list-group list-group-flush">';
+            echo '<li class="list-group-item"> La empresa es: <br> ' .$compania = $datos["jobs_results"][0]["company_name"] .'</li>';
+            echo '<li class="list-group-item"> El lugar es en: <br> ' .$locacion = $datos["jobs_results"][0]["location"] .'</li>';
+            echo '<li class="list-group-item"> La busqueda es: <br> ' .$via = $datos["jobs_results"][0]["via"] . '</li>';
+            echo '</ul>';
+            echo '<div class="card-body">';
+            echo '<a href="'.$link = $datos["jobs_results"][0]["related_links"][0]["link"].'" class="card-link">Link</a>';
+            echo '</div>';
+            echo '</div>';
+
+
+            echo '<br>';
+
+
+            echo '<div class="card" style="width: 18rem;">';
+            echo '<img src="../IMG/AXA.png" class="card-img-top" alt="...">';
+            echo '<div class="card-body">';
+            echo '<h5 class="card-title"> La Chamba es: <br> ' .$nombre = $datos["jobs_results"][1]["title"] .'</h5>';
+            echo '</div>';
+            echo '<ul class="list-group list-group-flush">';
+            echo '<li class="list-group-item"> La empresa es: <br> ' .$compania = $datos["jobs_results"][1]["company_name"] .'</li>';
+            echo '<li class="list-group-item"> El lugar es en: <br> ' .$locacion = $datos["jobs_results"][1]["location"] .'</li>';
+            echo '<li class="list-group-item"> La busqueda es: <br> ' .$via = $datos["jobs_results"][1]["via"] . '</li>';
+            echo '</ul>';
+            echo '<div class="card-body">';
+            echo '<a href="'.$link = $datos["jobs_results"][1]["related_links"][0]["link"].'" class="card-link">Link</a>';
+            echo '</div>';
+            echo '</div>';
+
+
+            echo '<br>';
+
+
+            echo '<div class="card" style="width: 18rem;">';
+            echo '<img src="../IMG/bluetab.jpg" class="card-img-top" alt="...">';
+            echo '<div class="card-body">';
+            echo '<h5 class="card-title"> La Chamba es: <br> ' .$nombre = $datos["jobs_results"][2]["title"] .'</h5>';
+            echo '</div>';
+            echo '<ul class="list-group list-group-flush">';
+            echo '<li class="list-group-item"> La empresa es: <br> ' .$compania = $datos["jobs_results"][2]["company_name"] .'</li>';
+            echo '<li class="list-group-item"> El lugar es en: <br> ' .$locacion = $datos["jobs_results"][2]["location"] .'</li>';
+            echo '<li class="list-group-item"> La busqueda es: <br> ' .$via = $datos["jobs_results"][2]["via"] . '</li>';
+            echo '</ul>';
+            echo '<div class="card-body">';
+            echo '<a href="'.$link = $datos["jobs_results"][2]["related_links"][0]["link"].'" class="card-link">Link</a>';
+            echo '</div>';
+            echo '</div>';
+
+
+            echo '<br>';
+
+
+            echo '<div class="card" style="width: 18rem;">';
+            echo '<img src="../IMG/TR.jpg" class="card-img-top" alt="...">';
+            echo '<div class="card-body">';
+            echo '<h5 class="card-title"> La Chamba es: <br> ' .$nombre = $datos["jobs_results"][3]["title"] .'</h5>';
+            echo '</div>';
+            echo '<ul class="list-group list-group-flush">';
+            echo '<li class="list-group-item"> La empresa es: <br> ' .$compania = $datos["jobs_results"][3]["company_name"] .'</li>';
+            echo '<li class="list-group-item"> El lugar es en: <br> ' .$locacion = $datos["jobs_results"][3]["location"] .'</li>';
+            echo '<li class="list-group-item"> La busqueda es: <br> ' .$via = $datos["jobs_results"][3]["via"] . '</li>';
+            echo '</ul>';
+            echo '<div class="card-body">';
+            echo '<a href="'.$link = $datos["jobs_results"][3]["related_links"][0]["link"].'" class="card-link">Link</a>';
+            echo '</div>';
+            echo '</div>';
+
+            
+            echo '<br>';
+
+
+            echo '<div class="card" style="width: 18rem;">';
+            echo '<img src="../IMG/Gice.jpg" class="card-img-top" alt="...">';
+            echo '<div class="card-body">';
+            echo '<h5 class="card-title"> La Chamba es: <br> ' .$nombre = $datos["jobs_results"][4]["title"] .'</h5>';
+            echo '</div>';
+            echo '<ul class="list-group list-group-flush">';
+            echo '<li class="list-group-item"> La empresa es: <br> ' .$compania = $datos["jobs_results"][4]["company_name"] .'</li>';
+            echo '<li class="list-group-item"> El lugar es en: <br> ' .$locacion = $datos["jobs_results"][4]["location"] .'</li>';
+            echo '<li class="list-group-item"> La busqueda es: <br> ' .$via = $datos["jobs_results"][4]["via"] . '</li>';
+            echo '</ul>';
+            echo '<div class="card-body">';
+            echo '<a href="'.$link = $datos["jobs_results"][4]["related_links"][0]["link"].'" class="card-link">Link</a>';
+            echo '</div>';
+            echo '</div>';
+
+            
+            echo '<br>';
+
+
+            echo '<div class="card" style="width: 18rem;">';
+            echo '<img src="../IMG/Quality.jpg" class="card-img-top" alt="...">';
+            echo '<div class="card-body">';
+            echo '<h5 class="card-title"> La Chamba es: <br> ' .$nombre = $datos["jobs_results"][5]["title"] .'</h5>';
+            echo '</div>';
+            echo '<ul class="list-group list-group-flush">';
+            echo '<li class="list-group-item"> La empresa es: <br> ' .$compania = $datos["jobs_results"][5]["company_name"] .'</li>';
+            echo '<li class="list-group-item"> El lugar es en: <br> ' .$locacion = $datos["jobs_results"][5]["location"] .'</li>';
+            echo '<li class="list-group-item"> La busqueda es: <br> ' .$via = $datos["jobs_results"][5]["via"] . '</li>';
+            echo '</ul>';
+            echo '<div class="card-body">';
+            echo '<a href="'.$link = $datos["jobs_results"][5]["related_links"][0]["link"].'" class="card-link">Link</a>';
+            echo '</div>';
+            echo '</div>';
+
+
+            echo '</div>';
+
+
         } else {
             echo '<p>Error al decodificar el JSON.</p>';
         }
