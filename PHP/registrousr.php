@@ -87,7 +87,18 @@
         });
     });
   </script>
+  <script>
+        //Verificar si el usuario está autenticado (ejemplo)
+        let tipousr = localStorage.getItem('loggedIn');
 
+        if (tipousr == 'true') {
+          alert('Debes cerrar sesion para poder acceder');
+            // Si el usuario no está autenticado, redirige a otra página o muestra un mensaje de error
+            window.location.href = '../PHP/Index.php'; // Redireccionar a la página de autenticación
+            // O muestra un mensaje de error
+             
+        }
+    </script>
   <?php
   include '../PHP/piepagina.php'
   ?>

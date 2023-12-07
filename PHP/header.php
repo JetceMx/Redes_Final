@@ -65,16 +65,6 @@
         }
 
     </script>
-    <script>
-        /* Verificar si el usuario está autenticado (ejemplo)
-        let tipousr = localStorage.getItem('tipo');
-
-        if (tipousr == 'Chanbeador o Empresa') {
-            // Si el usuario no está autenticado, redirige a otra página o muestra un mensaje de error
-            window.location.href = 'pagina_de_autenticacion.html'; // Redireccionar a la página de autenticación
-            // O muestra un mensaje de error
-            // alert('Debe iniciar sesión como Chambeador o Empresa para acceder a esta pagina');
-        }*/
-    </script>
+    
 </body>
 </html>

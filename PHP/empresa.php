@@ -170,7 +170,18 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Verificar si el usuario está autenticado (ejemplo)
+        let tipousr = localStorage.getItem('tipo');
 
+        if (tipousr == 'Chambeador') {
+            alert('Debe iniciar sesión como Empresa para acceder a esta pagina');
+            // Si el usuario no está autenticado, redirige a otra página o muestra un mensaje de error
+            window.location.href = '../PHP/Index.php'; // Redireccionar a la página de autenticación
+            // O muestra un mensaje de error
+             
+        }
+    </script>
 
     <?php
         include '../PHP/piepagina.php'
