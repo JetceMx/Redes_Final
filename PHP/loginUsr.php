@@ -23,10 +23,7 @@
 
       <form action="/" id="miFormulario3">
         <hr>
-        <div class="accounttype">
 
-        </div>
-        <hr>
         <label id="icon" for="name"><i class="icon-envelope "></i></label>
         <input type="text" name="name" id="LU_email" placeholder="Email" required />
 
@@ -35,7 +32,10 @@
 
         <p id="parrafo">Si estas de acuerdo con nuestros<a href="#">terminos y condiciones</a> Da click en Registrar </p>
         <button style="background-color: #1465bb; color: white;" type="button" onclick="handleLogin()">Iniciar sesion</button>
+
+        
       </form>
+
     </div>
 
   </div>

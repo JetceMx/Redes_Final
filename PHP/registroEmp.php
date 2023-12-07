@@ -44,6 +44,7 @@
         <button style="background-color: #1465bb; color: white;" class="button" type="submit">Registro</button>
       </form>
     </div>
+</div>
 
     <!-- Incluye la biblioteca uuid en tu HTML -->
     <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
@@ -96,6 +97,8 @@
              alert('Debes cerrar sesion para poder acceder');
         }
     </script>
+
+
     <?php
     include '../PHP/piepagina.php'
     ?>

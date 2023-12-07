@@ -13,13 +13,16 @@
     include '../PHP/headerEmp.php'
     ?>
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/loginusr.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/loginusr.css">
 
-    <div id="contenedor">
-        <div class="testbox">
-            <h1>Log in</h1>
+  <div id="contenedor">
+    <div class="testbox">
+      <h1>Iniciar sesion</h1>
+        <hr>
+
+        <form action="/" id="miFormulario1">
 
             <label id="icon" for="name"><i class="icon-user"></i></label>
             <input type="text" name="name" id="LE_name" placeholder="Name" required />
@@ -31,8 +34,10 @@
             <input type="password" name="name" id="LE_contra" placeholder="Password" required />
 
             <p id="parrafo">Si estas de acuerdo con nuestros <a href="#">terminos y condiciones</a> Da click en Registrar </p>
-            <button class="button" type="submit" onclick="handleLogin()">Ingrear</button>
-            </form>
+            <button style="background-color: #1465bb; color: white;" class="button" type="submit" onclick="handleLogin()">Ingrear</button>
+
+        </form>
+
         </div>
     </div>
 
@@ -89,6 +94,7 @@
                 });
         }
     </script>
+    
     <script>
          //Verificar si el usuario está autenticado (ejemplo)
         let tipousr = localStorage.getItem('loggedIn');
@@ -101,7 +107,6 @@
            
         }
     </script>
-    </div>
 
     <?php
     include '../PHP/piepagina.php'

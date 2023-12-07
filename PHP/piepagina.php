@@ -17,7 +17,7 @@
         </div>
         <div class="footer-contact">
             <h3>Contacto</h3>
-            <p>Email: info@misitioweb.com</p>
+            <p>Email: info@ChambaxSearch.com</p>
         </div>
     </div>
     <div class="footer-bottom">
