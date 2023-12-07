@@ -73,7 +73,7 @@ $link = $datos["jobs_results"][0]["related_links"][0]["link"];
 ?>
 
 <div class="container mt-5">
-        <h2 class="mb-4">Tabla de Datos desde JSON con Bootstrap</h2>
+        <h2 style="text-align: center;" class="mb-4">Chambas</h2>
 
         <?php
         $url = 'https://serpapi.com/search.json?engine=google_jobs&q=Desarrollador&location=Mexico&google_domain=google.com.mx&gl=mx&hl=es&api_key=7585e535ff6150e5560c96925641c5cad34eae29718a8ce7b357affd735a7883';
@@ -148,7 +148,7 @@ $link = $datos["jobs_results"][0]["related_links"][0]["link"];
             echo '</tbody>';
             echo '</table>';
 */
-            echo '<div>';
+            echo '<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">';
             echo '<div class="card" style="width: 18rem;">';
             echo '<img src="../IMG/ids.png" class="card-img-top" alt="...">';
             echo '<div class="card-body">';
@@ -163,11 +163,11 @@ $link = $datos["jobs_results"][0]["related_links"][0]["link"];
             echo '<a href="'.$link = $datos["jobs_results"][0]["related_links"][0]["link"].'" class="card-link">Link</a>';
             echo '</div>';
             echo '</div>';
-
+            echo  '</div>';
 
             echo '<br>';
 
-
+            echo '<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">';
             echo '<div class="card" style="width: 18rem;">';
             echo '<img src="../IMG/AXA.png" class="card-img-top" alt="...">';
             echo '<div class="card-body">';
@@ -182,11 +182,11 @@ $link = $datos["jobs_results"][0]["related_links"][0]["link"];
             echo '<a href="'.$link = $datos["jobs_results"][1]["related_links"][0]["link"].'" class="card-link">Link</a>';
             echo '</div>';
             echo '</div>';
-
+            echo '</div>';
 
             echo '<br>';
 
-
+            echo '<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">';
             echo '<div class="card" style="width: 18rem;">';
             echo '<img src="../IMG/bluetab.jpg" class="card-img-top" alt="...">';
             echo '<div class="card-body">';
@@ -201,11 +201,11 @@ $link = $datos["jobs_results"][0]["related_links"][0]["link"];
             echo '<a href="'.$link = $datos["jobs_results"][2]["related_links"][0]["link"].'" class="card-link">Link</a>';
             echo '</div>';
             echo '</div>';
-
+            echo '</div>';
 
             echo '<br>';
 
-
+            echo '<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">';
             echo '<div class="card" style="width: 18rem;">';
             echo '<img src="../IMG/TR.jpg" class="card-img-top" alt="...">';
             echo '<div class="card-body">';
@@ -220,11 +220,11 @@ $link = $datos["jobs_results"][0]["related_links"][0]["link"];
             echo '<a href="'.$link = $datos["jobs_results"][3]["related_links"][0]["link"].'" class="card-link">Link</a>';
             echo '</div>';
             echo '</div>';
-
+            echo '</div>';
             
             echo '<br>';
 
-
+            echo '<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">';
             echo '<div class="card" style="width: 18rem;">';
             echo '<img src="../IMG/Gice.jpg" class="card-img-top" alt="...">';
             echo '<div class="card-body">';
@@ -239,11 +239,11 @@ $link = $datos["jobs_results"][0]["related_links"][0]["link"];
             echo '<a href="'.$link = $datos["jobs_results"][4]["related_links"][0]["link"].'" class="card-link">Link</a>';
             echo '</div>';
             echo '</div>';
-
+            echo '</div>';
             
             echo '<br>';
 
-
+            echo '<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">';
             echo '<div class="card" style="width: 18rem;">';
             echo '<img src="../IMG/Quality.jpg" class="card-img-top" alt="...">';
             echo '<div class="card-body">';
@@ -258,10 +258,7 @@ $link = $datos["jobs_results"][0]["related_links"][0]["link"];
             echo '<a href="'.$link = $datos["jobs_results"][5]["related_links"][0]["link"].'" class="card-link">Link</a>';
             echo '</div>';
             echo '</div>';
-
-
             echo '</div>';
-
 
         } else {
             echo '<p>Error al decodificar el JSON.</p>';
