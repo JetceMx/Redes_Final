@@ -72,6 +72,7 @@
               // Almacenar la información del usuario en el almacenamiento local
               localStorage.setItem('loggedIn', 'true');
               localStorage.setItem('user', email);
+              localStorage.setItem('tipo', 'Chambeador');
 
               alert('Inicio de sesión exitoso');
               // Redireccionar a otra página después del inicio de sesión

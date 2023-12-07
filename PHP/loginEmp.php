@@ -67,6 +67,7 @@
                             // Almacenar la información del usuario en el almacenamiento local
                             localStorage.setItem('loggedIn', 'true');
                             localStorage.setItem('user', RE_mail);
+                            localStorage.setItem('tipo', 'Empresa');
 
                             alert('Inicio de sesión exitoso');
                             // Redireccionar a otra página después del inicio de sesión
