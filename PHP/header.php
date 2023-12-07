@@ -28,6 +28,9 @@
         <ul class="dropdown-menu">
             <li><hr class="dropdown-divider"></li>
             <li><a  id="milogout"class="dropdown-item" href="" onclick="miFuncion()">Cerrar sesion</a></li>
+            <li><a  id="milogout2"class="dropdown-item" href="" >Debes inicar sesion</a></li>
+            <li><a  id="milogout4"class="dropdown-item" href="../PHP/loginUsr.php" >Iniciar sesion como Chambeador</a></li>
+            <li><a  id="milogout5"class="dropdown-item" href="../PHP/loginEmp.php" >Iniciar sesion como Empresa</a></li>
         </ul>
         </li>
 
@@ -53,7 +56,7 @@
             
             let enlace = document.getElementById('link1');
             console.log(enlace);
-            enlace.innerHTML = 'Inicia sesion';
+            enlace.innerHTML = 'Debes iniciar sesion';
         }
         
         // Obtener la variable del Local Storage
@@ -66,9 +69,17 @@
         if (valorVariable == 'true') {
             // Ocultar el div cambiando su estilo display a 'none'
             milogout.style.display = 'block';
+            milogout2.style.display = 'none';
+           
+            milogout4.style.display = 'none';
+            milogout5.style.display = 'none';
         } else {
             // Dejar visible el div cambiando su estilo display a 'block' o cualquier otro adecuado
             milogout.style.display = 'none';
+            milogout2.style.display = 'block';
+           
+            milogout4.style.display = 'block';
+            milogout5.style.display = 'block';
         }
 
     </script>
