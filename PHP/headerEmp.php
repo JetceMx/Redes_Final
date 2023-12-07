@@ -14,7 +14,14 @@
     <nav>
         <a href="../PHP/loginEmp.php " >Iniciar sesion</a>
         <a href="../PHP/registroEmp.php">Registro</a>
-        <a href="#">Chamba</a>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Chambas</a>
+        <ul class="dropdown-menu">
+            <li><a  class="dropdown-item" href="../PHP/Chamba.php">Desarrollador</a></li>
+            <li><a  class="dropdown-item" href="../PHP/ChambaDiseño.php">Diseñador</a></li>
+            <li><a  class="dropdown-item" href="../PHP/ChambaAnalista.php">Analista</a></li>
+        </ul>
+        </li>
         <a href="../PHP/registroDeEmpresas.php">Registro de la Empresa</a>
         <li class="nav-item dropdown">
         <a id="link1" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>

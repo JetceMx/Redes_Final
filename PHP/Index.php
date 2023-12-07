@@ -140,18 +140,18 @@
                 'titulo' => 'Desarrollador Web',
                 'descripcion' => 'Buscamos un desarrollador web con experiencia en PHP, HTML, CSS y JavaScript.',
                 'imagen' => '../IMG/icon1.png',
-                'enlace' => '#'
+                'enlace' => '../PHP/Chamba.php'
             ],
             [
                 'titulo' => 'Diseñador Gráfico',
                 'descripcion' => 'Oportunidad para un diseñador gráfico creativo con habilidades en Adobe Creative Suite.',
                 'imagen' => '../IMG/icon2.png',
-                'enlace' => '#'
+                'enlace' => '../PHP/ChambaDiseño.php'
             ],[
                 'titulo' => 'Analista y diseñador de sistemas',
                 'descripcion' => 'Buscamos un Analista de sistemas con experiencia en PHP, HTML y base de datos.',
                 'imagen' => '../IMG/icon3.png',
-                'enlace' => '#'
+                'enlace' => '../PHP/ChambaAnalista.php'
             ],
             // Agrega más empleos según sea necesario
         ];
@@ -174,7 +174,7 @@
     <script>
         /*localStorage.setItem('user', "Juan");
         localStorage.setItem('loggedIn', "true");
-        localStorage.setItem('tipo', "Empresa");
+        localStorage.setItem('tipo', "Empresa");*/
     </script>
     <?php
         include '../PHP/piepagina.php'
