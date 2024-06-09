@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="../CSS/registroEmpleados.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/b459652853.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -13,41 +17,170 @@
   include '../PHP/headerEmp.php'
   ?>
 
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
-  <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
-  <link rel="stylesheet" href="../CSS/loginusr.css">
+<div class="contenedor">
+    <form class="row g-3">
+      <h4 style="text-align: center;">Datos Personales</h4>
+      <div class="input-group col-md-6">
+        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+        <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre"
+          aria-describedby="basic-addon1">
+      </div>
 
-  <div id="contenedor">
-    <div class="testbox">
-      <h1>Registro</h1>
-
-      <form action="/" id="miFormulario2">
-        <hr>
-        <div class="accounttype">
+      <div class="col-md-4">
+        <div class="input-group col-md-6">
+          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+          <input type="text" class="form-control" placeholder="Usuario" aria-label="Usuario"
+            aria-describedby="basic-addon1">
         </div>
-        <hr>
+      </div>
 
-        <label id="icon" for="name"><i class="icon-user"></i></label>
-        <input type="text" name="name" id="RE_nombre" placeholder="Nombre" required />
+      <div class="col-md-4">
+        <div class="input-group col-md-4">
+          <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-envelope"></i></span>
+          <input type="email" class="form-control" placeholder="Correo" aria-label="Correo"
+            aria-describedby="basic-addon2">
+        </div>
+      </div>
 
-        <label id="icon" for="name"><i class="icon-globe"></i></label>
-        <input type="text" name="name" id="RE_puesto" placeholder="Puesto" required />
+      <div class="col-md-4">
+        <div class="input-group col-md-6">
+          <span class="input-group-text" id="basic-addon3"><i class="fa-solid fa-lock"></i></span>
+          <input type="password" class="form-control" placeholder="Contraseña" aria-label="Contrasena"
+            aria-describedby="basic-addon3">
+        </div>
+      </div>
 
+      <div class="col-md-6">
+        <div class="input-group col-md-6">
+          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-phone"></i></span>
+          <input type="text" class="form-control" placeholder="Teléfono" aria-label="Usuario"
+            aria-describedby="basic-addon1">
+        </div>
+      </div>
 
-        <label id="icon" for="name"><i class="icon-envelope "></i></label>
-        <input type="text" name="name" id="RE_mail" placeholder="Email" required />
+      <div class="col-md-6">
+        <div class="input-group col-md-6">
+          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-house"></i></span>
+          <input type="text" class="form-control" placeholder="Localidad" aria-label="Usuario"
+            aria-describedby="basic-addon1">
+        </div>
+      </div>
+      <h4 style="text-align: center;">Datos Laborales</h4>
+      <div class="col-md-4">
+        <div class="input-group col-md-6">
+          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-money-bill"></i></span>
+          <input type="text" class="form-control" placeholder="Salario" aria-label="Usuario"
+            aria-describedby="basic-addon1">
+        </div>
+      </div>
 
-        <label id="icon" for="name"><i class="icon-shield"></i></label>
-        <input type="password" name="name" id="RE_contra" placeholder="Contraseña" required />
+      <div class="col-md-4">
+        <div class="input-group col-md-4">
+          <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-lock"></i></span>
+          <input type="email" class="form-control" placeholder="Horario" aria-label="Correo"
+            aria-describedby="basic-addon2">
+        </div>
+      </div>
 
-        <p id="parrafo">Si estas de acuerdo con nuestros<a href="#">terminos y condiciones</a> Da click en Registrar </p>
-        <button style="background-color: #1465bb; color: white;" class="button" type="submit">Registro</button>
-      </form>
-    </div>
-</div>
+      <div class="col-md-4">
+        <div class="input-group col-md-6">
+          <span class="input-group-text" id="basic-addon3"><i class="fa-solid fa-earth-americas"></i></span>
+          <input type="password" class="form-control" placeholder="Nacionalidad" aria-label="Contrasena"
+            aria-describedby="basic-addon3">
+        </div>
+      </div>
 
-    <!-- Incluye la biblioteca uuid en tu HTML -->
-    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputEscolaridad"><i class="fa-solid fa-school"></i></label>
+          <select class="form-select" id="inputEscolaridad">
+            <option selected>Escolaridad...</option>
+            <option value="0">Nula</option>
+            <option value="1">Primaria</option>
+            <option value="2">Secundaria</option>
+            <option value="3">Bachillerato</option>
+            <option value="4">Licenciatura</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputNivel"><i class="fa-solid fa-pencil"></i></label>
+          <select class="form-select" id="inputNivel">
+            <option selected>Nivel...</option>
+            <option value="1">Trunca</option>
+            <option value="2">Finalizada</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-user-doctor"></i></span>
+          <input type="text" class="form-control" id="inputEspecialidad" placeholder="Especialidad"
+            aria-label="Especialidad" aria-describedby="basic-addon2">
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="input-group">
+          <span class="input-group-text">Cursos</span>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="input-group">
+          <span class="input-group-text">Experiencia</span>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="input-group">
+          <span class="input-group-text">Pasantías</span>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="input-group">
+          <span class="input-group-text">Referencias</span>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+      </div>
+      <div class="col-12" style="text-align: center;">
+        <button type="submit" class="btn btn-primary">Registro</button>
+      </div>
+
+    </form>
+  </div>
+
+    <!-- Bootstrap JS and dependencies (Popper and jQuery) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Custom JS -->
+  <script>
+    document.getElementById('inputEscolaridad').addEventListener('change', function () {
+      var especialidadInput = document.getElementById('inputEspecialidad');
+      var nivelInput = document.getElementById('inputNivel');
+      if (this.value == '1' || this.value == '2') { // Si el valor es 1 (Primaria)
+        especialidadInput.value = ''; // Limpiar el campo
+        especialidadInput.disabled = true; // Deshabilitar el campo
+        nivelInput.disabled = false; // Habilitar el campo de nivel
+      } else if (this.value == '0') { // Si el valor es 0 (Nula)
+        especialidadInput.value = ''; // Limpiar el campo
+        especialidadInput.disabled = true; // Deshabilitar el campo
+        nivelInput.value = ''; // Limpiar el campo
+        nivelInput.disabled = true; // Deshabilitar el campo de nivel
+      } else {
+        especialidadInput.disabled = false; // Habilitar el campo
+        nivelInput.disabled = false; // Habilitar el campo de nivel
+      }
+    });
+  </script>
 
     <script>
       document.getElementById('miFormulario2').addEventListener('submit', function(event) {

@@ -19,7 +19,7 @@
 
   <div id="contenedor">
     <div class="testbox">
-      <h1>Iniciar sesion</h1>
+      <h1 style="font-size: bolder;">Iniciar Sesión</h1>
 
       <form action="/" id="miFormulario3">
         <hr>
@@ -30,9 +30,12 @@
         <label id="icon" for="name"><i class="icon-user"></i></label>
         <input type="password" name="name" id="LU_contra" placeholder="Contraseña" required />
 
-        <p id="parrafo">Si estas de acuerdo con nuestros<a href="#">terminos y condiciones</a> Da click en Registrar </p>
-        <button style="background-color: #1465bb; color: white;" type="button" onclick="handleLogin()">Iniciar sesion</button>
-
+        <p id="parrafo">
+        <i class="fa-solid fa-circle-check"></i>
+        Si estás de acuerdo con nuestros <a href="#">terminos y condiciones</a> da click en Ingresar.</p>
+    <div style="text-align: center;">
+        <button type="button" class="btn btn-primary" style="background-color: #26798E; color: white;" type="submit" onclick="handleLogin()">Ingresar</button>
+    </div>
         
       </form>
 

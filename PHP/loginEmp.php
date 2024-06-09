@@ -15,30 +15,33 @@
 
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
-  <link rel="stylesheet" href="../CSS/loginusr.css">
+  <link rel="stylesheet" href="../CSS/loginemp.css">
+  <script src="https://kit.fontawesome.com/b459652853.js" crossorigin="anonymous"></script>
 
-  <div id="contenedor">
     <div class="testbox">
-      <h1>Iniciar sesion</h1>
+      <h1 style="font-size: bolder;">Iniciar sesión</h1>
         <hr>
-
         <form action="/" id="miFormulario1">
 
-            <label id="icon" for="name"><i class="icon-user"></i></label>
-            <input type="text" name="name" id="LE_name" placeholder="Name" required />
+    <label id="icon" for="LE_name"><i class="icon-user"></i></label>
+    <input type="text" name="name" id="LE_name" placeholder="Nombre" required />
 
-            <label id="icon" for="name"><i class="icon-envelope "></i></label>
-            <input type="text" name="name" id="LE_mail" placeholder="Email" required />
+    <label id="icon" for="LE_mail"><i class="icon-envelope "></i></label>
+    <input type="text" name="email" id="LE_mail" placeholder="Email" required />
 
-            <label id="icon" for="name"><i class="icon-shield"></i></label>
-            <input type="password" name="name" id="LE_contra" placeholder="Password" required />
+    <label id="icon" for="LE_contra"><i class="icon-shield"></i></label>
+    <input type="password" name="password" id="LE_contra" placeholder="Password" required />
 
-            <p id="parrafo">Si estas de acuerdo con nuestros <a href="#">terminos y condiciones</a> Da click en Registrar </p>
-            <button style="background-color: #1465bb; color: white;" class="button" type="submit" onclick="handleLogin()">Ingrear</button>
+    <p id="parrafo">
+        <i class="fa-solid fa-circle-check"></i>
+        Si estás de acuerdo con nuestros <a href="#">terminos y condiciones</a> da click en Ingresar.</p>
+    <div style="text-align: center;">
+        <button type="button" class="btn btn-primary" style="background-color: #26798E; color: white;" type="submit" onclick="handleLogin()">Ingresar</button>
+    </div>
 
-        </form>
+</form>
 
-        </div>
+
     </div>
 
     <script>

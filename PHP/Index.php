@@ -3,64 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/principal.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <style>
-        .testimonial {
-            text-align: center;
-            margin: 20px;
-        }
-
-        .testimonial img {
-            border-radius: 50%;
-            max-width: 100px;
-            height: auto;
-        }
-
-        .about-section {
-            text-align: center;
-            padding: 30px;
-            background-color: #f9f9f9;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-
-        section {
-            padding: 20px;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 10px;
-            margin: 10px;
-            width: 300px;
-            background-color: #fff;
-        }
-
-        .card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
-
 
         @media only screen and (max-width: 600px) {
     body {
@@ -77,58 +29,35 @@
 
 }
     </style>
-    <title>Chamba Search</title>
+    <title>Sabinito Search</title>
 </head>
 <body>
+<header>
     <?php
         include '../PHP/header.php'
     ?>
-
-<div class="container mt-5">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-
-                <?php
-                // Aquí puedes obtener dinámicamente los datos del carrusel desde una base de datos o cualquier otra fuente
-                $items = [
-                    ['image' => '../IMG/imagen1.jpg', 'caption' => ' '],
-                    ['image' => '../IMG/imagen2.jpg', 'caption' => ' '],
-                    ['image' => '../IMG/imagen3.jpg', 'caption' => ' '],
-                ];
-
-                foreach ($items as $Index => $item) {
-                    $activeClass = ($Index == 0) ? 'active' : '';
-                    echo '<div class="carousel-item ' . $activeClass . '">';
-                    echo '<img src="../IMG/' . $item['image'] . '" class="d-block w-100" alt="Slide ' . ($Index + 1) . '">';
-                    echo '<div class="carousel-caption d-none d-md-block">';
-                    echo '<h5>' . $item['caption'] . '</h5>';
-                    echo '</div>';
-                    echo '</div>';
-                }
-                ?>
-
-            </div>
-
-            <!-- Controles de navegación -->
-            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Anterior</span>
-            </a>
-            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Siguiente</span>
-            </a>
+    <section class="textos-header">
+        <div id="txtTitle">
+            <h1>Una forma fácil de conseguir tu nuevo empleo</h1>
+            <h2>Esta plataforma permite explorar oportunidades laborales para adecuar la mejor a tu perfil.</h2>
         </div>
-    </div>
-
-    <br>
-    <br>
-    <br>
-    <section id="section1" class="about-section">
-        <h2>¿Chamba x Search?</h2>
-        <p>Chamba x Search es una plataforma en línea diseñada para conectar a empleadores y profesionales en busca de oportunidades laborales. Ofrecemos un espacio donde las empresas pueden publicar sus vacantes y los candidatos pueden buscar trabajos que se adapten a sus habilidades y aspiraciones.</p>
-        <p>Nuestra misión es facilitar el proceso de búsqueda de empleo y simplificar la contratación para empleadores. Con BuscaEmpleo.com, encontrar o publicar empleos es rápido, fácil y efectivo.</p>
+        <div id="txtImg">
+            <img src="../IMG/ambientelaboral.png" id="styled-image" alt="Imagen 1">
+        </div>
     </section>
+    <div class="wave"  style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-3.16,111.70 C223.70,115.64 272.23,44.78 500.00,49.85 L500.00,149.60 L-7.67,169.77 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+</header>
+<div class="container">
+    <section id="section1" class="about-section">
+        <h2 style="color: #26798E;text-align: center;font-weight: bolder; font-size: 50px;">
+            <i class="fa-solid fa-magnifying-glass"></i> 
+            Sabinito Search
+        </h2>
+        <p style="margin-left: 30px; font-size:25px; text-align:center;">
+        Somos una plataforma en línea dinámica creada para conectar de manera efectiva a empleadores y profesionales en busca de oportunidades laborales. En nuestro sitio, las empresas pueden publicar sus vacantes de empleo con facilidad y precisión, mientras que los candidatos tienen la posibilidad de explorar una amplia gama de ofertas laborales que se ajusten a sus habilidades, experiencia y aspiraciones profesionales.</p>
+    </section>
+
+
     <br>
     <br>
 
@@ -157,17 +86,43 @@
         ];
 
         // Genera tarjetas para cada empleo
+?>
+<div "container-ofertas" style="display:flex; justify-content: space-between;">
+
+<?php
         foreach ($empleos as $empleo) {
-            echo '<div class="card">';
-            echo '<img src="' . $empleo['imagen'] . '" alt="' . $empleo['titulo'] . '">';
-            echo '<h3>' . $empleo['titulo'] . '</h3>';
-            echo '<p>' . $empleo['descripcion'] . '</p>';
-            echo '<a href="' . $empleo['enlace'] . '">Solicitar</a>';
+            echo '<article class="information [ card ]">';
+            echo '<div style="display: flex">';
+            echo '';
+            echo '';
+            echo '<img src="' . $empleo['imagen'] . '" style="width:80px;" class="card-img-top" alt="' . $empleo['titulo'] . '">';
+            echo '<h2 class="title" style="margin-left:20px;font-weight: bolder;">' . $empleo['titulo'] . '</h2>';
             echo '</div>';
+            echo '<p class="info" style="margin-top: 10px;">' . $empleo['descripcion'] . '</p>';
+            echo '<button class="button" style="background-color:#9fd7e594" href="' . $empleo['enlace'] . '">Solicitar<i class="fa-solid fa-arrow-right-long"></i>
+		</button>
+	</article>';
         }
         ?>
+        </div>
+
     </section>
 
+    <section class="contenedor sobre-nosotros">
+            <h2 class="titulo" style="color: #26798E;text-align: center;font-weight: bolder; font-size: 30px;">Sobre nosotros</h2>
+            <div class="contenedor-sobre-nosotros">
+                <img src="../IMG/ambientelaboral.png" alt="" class="imagen-about-us">
+                <div class="contenido-textos">
+                    <h3><span>1</span>Misión</h3>
+                    <p>Nuestra misión es transformar el proceso de búsqueda de empleo y reclutamiento mediante la creación de una plataforma intuitiva, accesible y eficaz. Nos esforzamos por empoderar a los profesionales y a las empresas, proporcionándoles herramientas y recursos que simplifiquen la conexión entre el talento y las oportunidades laborales, promoviendo el desarrollo profesional y el crecimiento empresarial.</p>
+                    <h3><span>2</span>Visión</h3>
+                    <p>Nuestra visión es ser la plataforma líder en la intermediación laboral a nivel global, reconocida por nuestra capacidad de innovación, confiabilidad y efectividad. Aspiramos a ser el punto de referencia para todos aquellos que buscan potenciar su carrera profesional o encontrar el talento adecuado para sus organizaciones, contribuyendo a un mercado laboral más eficiente, equitativo y dinámico.</p>
+                </div>
+            </div>
+    </section>
+
+
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -181,5 +136,6 @@
     ?>
 
     
+
 </body>
 </html> 

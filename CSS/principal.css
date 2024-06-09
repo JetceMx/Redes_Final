@@ -1,0 +1,221 @@
+body{
+    font-family: 'open sans';
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: #26798E; /* Fallback para navegadores antiguos */
+    background: -webkit-linear-gradient(to right, rgba(35, 178, 149, 0.75), rgba(68, 205, 230, 0.35)); 
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(35, 178, 149, 0.75), rgba(68, 205, 230, 0.35)); 
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+	background-position: center;
+}
+
+
+header .textos-header{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;   
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color:#fff;
+}
+
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color:#fff;
+}
+
+.textos-header h1, .textos-header h2 {
+    margin: 10px 0;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+#styled-image {
+    flex: 1;
+            max-width: 100%;
+            height: auto;
+    width: 400px;
+    margin: 20px; /* Espacio alrededor de la imagen */
+    max-width: 100%; /* Ajuste al contenedor */
+}
+
+#txtTitle {
+    width: 50%;
+    flex: 1;
+    color: black;
+    padding-right: 20px;
+    justify-content: left;
+}
+#txtTitle h1, #txtTitle h2 {
+    margin: 10px 0;
+}
+#txtImg {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2.5rem;
+	width: 90%;
+	max-width: 1000px;
+	margin: 10vh auto;
+}
+
+.card {
+	border-radius: 16px;
+	box-shadow: 0 30px 30px -25px rgba(#4133B7, .25);
+	max-width: 300px;
+    background-color:#9fd7e594";
+}
+
+.information {
+	background-color: var(--c-white);
+	padding: 1.5rem;
+
+	.tag {
+		display: inline-block;
+		background-color: var(--c-titan-white);
+		color: var(--c-indigo);
+		font-weight: 600;
+		font-size: 0.875rem;
+		padding: 0.5em 0.75em;
+		line-height: 1;
+		border-radius: 6px;
+		& + * {
+			margin-top: 1rem;
+		}
+	}
+
+	.title {
+		font-size: 1.5rem;
+		color: var(--c-void);
+		line-height: 1.25;
+		& + * {
+			margin-top: 1rem;
+		}
+	}
+
+	.info {
+		color: var(--c-charcoal);
+		& + * {
+			margin-top: 1.25rem;
+		}
+	}
+
+	.button {
+		font: inherit;
+		line-height: 1;
+		background-color: var(--c-white);
+		border: 2px solid var(--c-indigo);
+		color: var(--c-indigo);
+		padding: 0.5em 1em;
+		border-radius: 6px;
+		font-weight: 500;
+		display: inline-flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5rem;
+		&:hover,
+		&:focus {
+			background-color: var(--c-indigo);
+			color: var(--c-white);
+		}
+	}
+	
+	.details {
+		display: flex;
+		gap: 1rem;
+		div {
+			padding: .75em 1em;
+			background-color: var(--c-titan-white);
+			border-radius: 8px;
+			display: flex;
+			flex-direction: column-reverse;
+			gap: .125em;
+			flex-basis: 50%;
+		}
+		
+		dt {
+			font-size: .875rem;
+			color: var(--c-cold-purple);
+		}
+		
+		dd {
+			color: var(--c-indigo);
+			font-weight: 600;
+			font-size: 1.25rem;
+		}
+	}
+}
+
+main .sobre-nosotros{
+    padding: 30px 0 60px 0;
+}
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagen-about-us{
+    width: 48%;
+}
+
+.sobre-nosotros .contenido-textos{
+    width: 48%;
+}
+
+.contenido-textos h3{
+    margin-bottom: 15px;
+}
+
+.contenido-textos h3 span{
+    background: #26798E;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
