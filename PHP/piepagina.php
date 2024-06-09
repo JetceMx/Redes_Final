@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Pie de pagina</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="/CSS/piepagina.css">
+    <link rel="stylesheet" href="../CSS/piepagina.css">
      <!--Iconos-->
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </head>
