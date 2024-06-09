@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg" style="background-color: #9fd7e594;">
         <div class="container-fluid">
             <a class="navbar-brand" href="../PHP/Index.php">
                 <img src="../IMG/logo.png" alt="Logo" height="80" class="d-inline-block align-text-top">

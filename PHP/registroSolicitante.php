@@ -5,15 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="../CSS/registroEmpleados.css">
+  <link rel="stylesheet" href="../CSS/registroSolicitante.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/b459652853.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <div class="contenedor">
-    <form class="row g-3">
+
+  <?php
+  include '../PHP/headerEmp.php'
+  ?>
+
+<div class="contenedor">
+    <form class="row g-3" style="padding: 20px;">
       <h4 style="text-align: center;">Datos Personales</h4>
       <div class="input-group col-md-6">
         <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
@@ -85,7 +90,7 @@
         </div>
       </div>
 
-      <div class="col-md-2">
+      <div class="col-md-4">
         <div class="input-group mb-3">
           <label class="input-group-text" for="inputEscolaridad"><i class="fa-solid fa-school"></i></label>
           <select class="form-select" id="inputEscolaridad">
@@ -146,12 +151,13 @@
         </div>
       </div>
       <div class="col-12" style="text-align: center;">
-        <button type="submit" class="btn btn-primary">Sign in</button>
+        <button type="submit" class="btn btn-primary">Registro</button>
       </div>
 
     </form>
   </div>
-  <!-- Bootstrap JS and dependencies (Popper and jQuery) -->
+
+    <!-- Bootstrap JS and dependencies (Popper and jQuery) -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -175,6 +181,61 @@
       }
     });
   </script>
+
+    <script>
+      document.getElementById('miFormulario2').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita el envío normal del formulario
+
+        // Obtiene los datos del formulario
+        const RE_nombre = document.getElementById('RE_nombre').value;
+        const RE_puesto = document.getElementById('RE_puesto').value;
+        const RE_mail = document.getElementById('RE_mail').value;
+        const RE_contra = document.getElementById('RE_contra').value;
+
+        // Genera un identificador único para cada registro
+        const RE_id = uuidv4();
+
+        // Envia los datos al servidor
+        fetch('http://192.168.1.75:3000/guardarDatosUsuariosEmpresas', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              RE_id,
+              RE_nombre,
+              RE_puesto,
+              RE_mail,
+              RE_contra
+            }),
+          })
+          .then(response => response.text())
+          .then(message => {
+            console.log(message);
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+      });
+    </script>
+    <script>
+        // Verificar si el usuario está autenticado (ejemplo)
+        let tipousr = localStorage.getItem('loggedIn');
+
+        if (tipousr == 'true') {
+          alert('Debes cerrar sesion para poder acceder');
+            // Si el usuario no está autenticado, redirige a otra página o muestra un mensaje de error
+            window.location.href = '../PHP/Index.php'; // Redireccionar a la página de autenticación
+            // O muestra un mensaje de error
+             alert('Debes cerrar sesion para poder acceder');
+        }
+    </script>
+
+
+    <?php
+    include '../PHP/piepagina.php'
+    ?>
+
 </body>
 
 </html>
