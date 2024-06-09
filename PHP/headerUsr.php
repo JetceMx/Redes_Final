@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,12 @@
     <link rel="stylesheet" href="../CSS/header.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="../PHP/Index.php">
-                <img src="/IMG/logo.png" alt="Logo" height="80" class="d-inline-block align-text-top">
+                <img src="../IMG/logo.png" alt="Logo" height="80" class="d-inline-block align-text-top">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -41,7 +43,9 @@
                             <i class="fa-solid fa-user fa-1x" style="color:#26798E"></i> Ingresar
                         </a>
                         <ul class="dropdown-menu">
-                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
                             <li><a id="milogout" class="dropdown-item" href="#" onclick="miFuncion()">Cerrar sesión</a></li>
                             <li><a id="milogout2" class="dropdown-item" href="#">Debes iniciar sesión</a></li>
                             <li><a id="milogout4" class="dropdown-item" href="../PHP/loginUsr.php">Iniciar sesión como Chambeador</a></li>
@@ -65,17 +69,17 @@
 
         let data = localStorage.getItem('user');
         if (data !== null) {
-            
+
             let enlace = document.getElementById('link1');
             console.log(enlace);
-            enlace.innerHTML = 'Bienvenido ' +data;
+            enlace.innerHTML = 'Bienvenido ' + data;
         } else {
-            
+
             let enlace = document.getElementById('link1');
             console.log(enlace);
             enlace.innerHTML = 'Debes iniciar sesion';
         }
-        
+
         // Obtener la variable del Local Storage
         let valorVariable = localStorage.getItem('loggedIn');
 
@@ -87,18 +91,18 @@
             // Ocultar el div cambiando su estilo display a 'none'
             milogout.style.display = 'block';
             milogout2.style.display = 'none';
-          
+
             milogout4.style.display = 'none';
             milogout5.style.display = 'none';
         } else {
             // Dejar visible el div cambiando su estilo display a 'block' o cualquier otro adecuado
             milogout.style.display = 'none';
             milogout2.style.display = 'block';
-           
+
             milogout4.style.display = 'block';
             milogout5.style.display = 'block';
         }
-
     </script>
 </body>
+
 </html>
