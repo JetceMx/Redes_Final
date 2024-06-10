@@ -66,9 +66,8 @@
     <script>
         function miFuncion() {
             // Agrega aquí el código que deseas ejecutar al hacer clic en el enlace
-            localStorage.removeItem('user');
-            localStorage.removeItem('loggedIn');
-            localStorage.removeItem('tipo');
+            localStorage.removeItem('TipoUsr');
+
         }
 
         let data = localStorage.getItem('user');

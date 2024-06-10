@@ -21,21 +21,23 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../PHP/usuario.php">Usuario</a>
+                        <a class="nav-link active" aria-current="page" href="../PHP/BuscadorUsr.php">Usuario</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../PHP/empresa.php">Empresa</a>
+                        <a class="nav-link active" aria-current="page" href="../PHP/BuscadorEmp.php">Empresa</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Empleos
+                            Registros
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../PHP/Chamba.php">Desarrollador</a></li>
-                            <li><a class="dropdown-item" href="../PHP/ChambaDiseño.php">Diseñador</a></li>
-                            <li><a class="dropdown-item" href="../PHP/ChambaAnalista.php">Analista</a></li>
+                            <li><a id="vc" class="dropdown-item" href="../PHP/Chamba.php">Vacante</a></li>
+                            <li><a id="sol" class="dropdown-item" href="../PHP/ChambaDiseño.php">Solicitante</a></li>
+                            <li><a id="prop" class="dropdown-item" href="../PHP/ChambaAnalista.php">Propuesta</a></li>
+                            <li><a id="usrem" class="dropdown-item" href="../PHP/ChambaAnalista.php">Usuario Empresa</a></li>
                         </ul>
                     </li>
+                </ul>
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
@@ -67,45 +69,27 @@
     <script>
         function miFuncion() {
             // Agrega aquí el código que deseas ejecutar al hacer clic en el enlace
-            localStorage.removeItem('user');
-            localStorage.removeItem('loggedIn');
-            localStorage.removeItem('tipo');
+            localStorage.removeItem('TipoUsr');
+
         }
 
-        let data = localStorage.getItem('user');
-        if (data !== null) {
-
-            let enlace = document.getElementById('link1');
-            console.log(enlace);
-            enlace.innerHTML = 'Bienvenido ' + data;
-        } else {
-
-            let enlace = document.getElementById('link1');
-            console.log(enlace);
-            enlace.innerHTML = 'Debes iniciar sesion';
-        }
-
-        // Obtener la variable del Local Storage
-        let valorVariable = localStorage.getItem('loggedIn');
-
-        // Obtener la referencia a la etiqueta div
-        let milogout = document.getElementById('milogout');
+        let data = localStorage.getItem('TipoUsr');
 
         // Verificar si la variable tiene un valor específico en el Local Storage
-        if (valorVariable == 'true') {
+        if (data == 'patron') {
             // Ocultar el div cambiando su estilo display a 'none'
-            milogout.style.display = 'block';
-            milogout2.style.display = 'none';
+            vc.style.display = 'block';
+            usrem.style.display = 'none';
 
-            milogout4.style.display = 'none';
-            milogout5.style.display = 'none';
-        } else {
+            sol.style.display = 'none';
+            prop.style.display = 'none';
+        } else if (data = 'chambas') {
             // Dejar visible el div cambiando su estilo display a 'block' o cualquier otro adecuado
-            milogout.style.display = 'none';
-            milogout2.style.display = 'block';
+            vc.style.display = 'none';
+            usrem.style.display = 'none';
 
-            milogout4.style.display = 'block';
-            milogout5.style.display = 'block';
+            sol.style.display = 'none';
+            prop.style.display = 'block';
         }
     </script>
 

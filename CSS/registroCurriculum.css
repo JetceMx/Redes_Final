@@ -1,0 +1,33 @@
+.contenedor {
+    padding: 30px;
+}
+
+form {
+    background-color: #a8cfd9;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.input-group {
+    flex: 1;
+    /* Para que los campos se distribuyan equitativamente */
+}
+
+.input-group:not(:last-child) {
+    margin-right: 15px;
+    /* Espacio entre los campos, ajusta según sea necesario */
+}
+
+@media (max-width: 768px) {
+    .d-flex {
+        flex-direction: column;
+    }
+
+    .input-group:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
